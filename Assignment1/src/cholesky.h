@@ -1,7 +1,7 @@
 #pragma once
 
 #include <utility>
-#include <cmath>
+#include <algorithm>
 
 #include "matrix.h"
 
@@ -90,4 +90,4 @@ std::pair<Matrix<T>, bool> bcholesky(const Matrix<T>& m)
     }
     return {lower, true};
 }
-}
+} // namespace Numeric

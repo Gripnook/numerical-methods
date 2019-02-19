@@ -135,7 +135,9 @@ void question3()
     for (w = 1.0; w < 2.0; w += 0.1)
     {
         auto result = sor(grid, freeNodes, w);
-        auto potential = result.first(0.04 / h, 0.06 / h).potential;
+        auto potential =
+            result.first(static_cast<int>(0.04 / h), static_cast<int>(0.06 / h))
+                .potential;
         std::cout << w << "," << result.second << "," << potential << std::endl;
     }
 
@@ -147,7 +149,9 @@ void question3()
     {
         std::tie(grid, freeNodes) = createGrid(h);
         auto result = sor(grid, freeNodes, w);
-        auto potential = result.first(0.04 / h, 0.06 / h).potential;
+        auto potential =
+            result.first(static_cast<int>(0.04 / h), static_cast<int>(0.06 / h))
+                .potential;
         std::cout << h << "," << result.second << "," << potential << std::endl;
     }
 
@@ -157,7 +161,9 @@ void question3()
     {
         std::tie(grid, freeNodes) = createGrid(h);
         auto result = jacobi(grid, freeNodes);
-        auto potential = result.first(0.04 / h, 0.06 / h).potential;
+        auto potential =
+            result.first(static_cast<int>(0.04 / h), static_cast<int>(0.06 / h))
+                .potential;
         std::cout << h << "," << result.second << "," << potential << std::endl;
     }
 
